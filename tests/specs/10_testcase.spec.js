@@ -23,7 +23,7 @@ test.describe.configure({ mode: 'parallel' });
  * eliminating the need to repeat setup navigation steps inside the test body.
  */
 
-test('1. Navigate to HTML Page', async ({page}) => {
+test('TC001 - Navigate to HTML Page', async ({page}) => {
    await clickElement(page, locators.htmlPage.htmlHome);
    await checkElementVisible(page, locators.htmlPage.htmlHome);
    await checkTextEquals(page, locators.htmlPage.htmlHome, "HTML HOME");
@@ -49,12 +49,35 @@ test('1. Navigate to HTML Page', async ({page}) => {
  * enabling consistent test setup and clean structure.
  */
 
-test('2. Login Login with Valid Credentials ', async ({ page }) => {
+test('TC002 - Login Login with Valid Credentials ', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password);    
 });
 
-test('3. Sign up ', async ({ page }) => {
+/**
+ * Test Case 3 : Sign Up Flow (Valid and Duplicate Users)
+ *
+ * Description:
+ * This test automates the sign-up process from the navigation bar.
+ * It handles both expected outcomes:
+ *  - New user registration confirmation
+ *  - Duplicate user error handling
+ *
+ * Flow:
+ * 1. Waits for the "Sign Up" link in the navbar and clicks it.
+ * 2. Fills the email, password, first name, and last name.
+ * 3. Submits the form.
+ * 4. Waits for confirmation or error message.
+ * 5. Verifies the exact message for:
+ *    - New user: email confirmation sent
+ *    - Existing user: duplicate user error
+ *
+ * Uses modular functions (e.g. clickElement, checkTextEquals),
+ * and shared locators for maintainability.
+ */
+
+
+test('TC003 - Sign Up with Valid or Existing User', async ({ page }) => {
     await waitForVisible(page, locators.navBar.signupLink, delay10 )
     await clickElement(page, locators.navBar.signupLink)
     await waitForNetworkIdle(page);
@@ -75,10 +98,30 @@ test('3. Sign up ', async ({ page }) => {
 });
 
 
-test('4. Bootstrap5 Colour', async ({ page }) => {
-  /** Navigate to https://www.w3schools.com/html/default.asp
-   * using baseFixtures fucntion then use Login
-   */
+/**
+ * Test Case 4: Bootstrap5 Color Validation
+ *
+ * Description:
+ * This test logs in via the LoginPage class and navigates to the Bootstrap5 color section.
+ * It performs visual UI checks to ensure proper rendering of Bootstrap5 text color styles.
+ *
+ * Steps:
+ * - Log in using valid credentials.
+ * - Navigate to the Bootstrap5 tutorial section via navbar.
+ * - Scroll and click on the BS5 color demo.
+ * - Validate Dashboard heading.
+ * - Validate various styled text elements for:
+ *    - Correct text content
+ *    - Correct CSS color values
+ *    - Correct margin-bottom spacing
+ *
+ * Note:
+ * `locators.textStyles` is assumed to be an array of objects with { selector, text, color }.
+ * This test demonstrates strong UI style verification and interaction with dynamically styled content.
+ */
+
+test('TC004 - Bootstrap5 Color Validation', async ({ page }) => {
+  
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password);
   await waitForVisible(page, locators.navBar.bootStrap, delay10)
@@ -111,6 +154,7 @@ test('4. Bootstrap5 Colour', async ({ page }) => {
     await expect(page.locator('.text-light')).toHaveCSS('margin-bottom', '15px');
    
 });
+
 
 
 test('5. HTML table', async ({ page }) => {

@@ -23,3 +23,20 @@
 |                     |   6. Validate HTML page again |
 | **Expected Result** | User logs in, HTML page loads, "HTML HOME" and "Tutorial" text appear                                                                                                                     |
 | **Category**        | Login, Navigation, UI Validation, Screenshot                                                                                                                                              |                                                                                                                         |
+
+| Field            | TC ID                                                                       | Description                         |
+| ---------------- | --------------------------------------------------------------------------- | ----------------------------------- |
+| **Test Case ID** | `TC003`                                                                     | Sign Up with Valid or Existing User |
+| **Title**        | Sign Up: New vs Existing User                                               |                                     |
+| **Steps**        | 1. Click Sign Up <br> 2. Fill form <br> 3. Submit <br> 4. Validate response |                                     |
+| **Expected**     | Either email confirmation or duplicate user error                           |                                     |
+| **Category**     | Form Validation, Conditional Flow                                           |                                     |
+
+
+| Field            | Value                                                                                                               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Test Case ID** | TC004                                                                                                               |
+| **Title**        | Bootstrap5 Color Styling Verification                                                                               |
+| **Steps**        | 1. Login <br> 2. Navigate to Bootstrap5 tab <br> 3. Scroll & click into color section <br> 4. Validate color blocks |
+| **Expected**     | Each Bootstrap color class has correct text, color, and spacing                                                     |
+| **Category**     | UI Verification, Styling                                                                                            |
