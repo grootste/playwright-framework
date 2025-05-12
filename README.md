@@ -16,7 +16,7 @@ Covergo/
 │ ├── specs/ # Test files (10 test cases)
 ├── utils/ # Utilities/helpers
 ├── playwright-report/ # HTML reports generated
-├──screenshots/ stores the screenshot when executed included in .gitinore
+├── screenshots/ stores the screenshot when executed included in .gitinore
 ├── test-results/ # Test output
 ├── textcase.txt/ #contains all the testcase steps and desciption
 ├── .env # Environment variables
@@ -65,12 +65,17 @@ npx playwright test
 ```bash
 npm run test:sequential
 ```
+```text
+Sequential execution use 1 workers.
+```
 
 ### Parallel
 ```bash
 npm run test:parallel
 ```
-
+```text
+Parllel execution use 4 workers to maintain effective resecouce management of device. Please change it on Playright config file.
+```
 ### 4. 🔍 Run a Specific Test
 
 ```bash
