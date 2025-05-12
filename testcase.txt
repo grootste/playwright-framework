@@ -1,0 +1,7 @@
+| Field               | Details                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------- |
+| **Test Case ID**    | TC001                                                                                             |
+| **Title**           | Navigate to HTML Page and Validate Content                                                        |
+| **Steps**           | 1. Click on the HTML Home link<br>2. Verify visibility of key elements<br>3. Validate text values |
+| **Expected Result** | HTML Home page loads, "HTML HOME" text appears, and Dashboard shows "Tutorial"                    |
+| **Category**        | Navigation, UI Verification                                                                       |

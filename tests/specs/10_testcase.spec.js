@@ -8,6 +8,21 @@ const { email, password, fname, lname, delay10, delay20 } = require('../../confi
 //Describing config paralel model
 test.describe.configure({ mode: 'parallel' });
 
+/**
+ * Test Case 1: Navigate to HTML Page
+ *
+ * This test simulates user behavior by navigating to the HTML tutorial page on W3Schools.
+ * It performs the following validations:
+ * - Clicks the "HTML Home" navigation link.
+ * - Ensures the HTML Home element is visible.
+ * - Verifies that the text of the HTML Home link is "HTML HOME".
+ * - Checks visibility of the Dashboard section after navigation.
+ * - Confirms that the Dashboard contains the label "Tutorial".
+ *
+ * This test demonstrates UI interaction, element validation, and basic content verification.
+ */
+
+
 test('1. Navigate to HTML Page', async ({page}) => {
    await clickElement(page, locators.htmlPage.htmlHome);
    await checkElementVisible(page, locators.htmlPage.htmlHome);
