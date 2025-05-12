@@ -16,6 +16,7 @@ Covergo/
 │ ├── specs/ # Test files (10 test cases)
 ├── utils/ # Utilities/helpers
 ├── playwright-report/ # HTML reports generated
+├──screenshots/ stores the screenshot when executed included in .gitinore
 ├── test-results/ # Test output
 ├── textcase.txt/ #contains all the testcase steps and desciption
 ├── .env # Environment variables
@@ -80,6 +81,14 @@ npx playwright test tests/specs/10_testcase.spec.js
 
 ```bash
 npx playwright show-report
+```
+
+```text
+To view report and testcase description goto this folder in the project
+├──screenshots/ stores the screenshot when executed included in .gitinore
+├── playwright-report/ # HTML reports generated
+├── test-results/ # Test output
+├── textcase.txt/ #contains all the testcase steps and desciption
 ```
 
 ### ✅ Features Tested
