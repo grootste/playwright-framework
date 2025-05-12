@@ -86,6 +86,9 @@ set NODE_OPTIONS=--max-old-space-size=4096
 ```bash
 npx playwright test tests/specs/10_testcase.spec.js
 ```
+```text
+ include  --workers=1 in the above command at last if by default 4 worker causes system a problem.
+```
 
 ### 5. 📊 Generate HTML Report
 
