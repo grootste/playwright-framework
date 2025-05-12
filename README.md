@@ -8,18 +8,31 @@ This project is an automated test suite using [Playwright](https://playwright.de
 
 Covergo/
 ├── config/ # Global configuration files
+
 ├── fixtures/ # Custom Playwright test fixtures
+
 ├── pages/ # Page Object Models (POM)
+
 ├── tests/ # Main test directory
+
 │ ├── locators/ # Central element locators
+
 │ ├── specs/ # Test files (10 test cases)
+
 ├── utils/ # Utilities/helpers
+
 ├── playwright-report/ # HTML reports generated
+
 ├── test-results/ # Test output
+
 ├── .env # Environment variables
+
 ├── playwright.config.js # Playwright global config
+
 ├── package.json # NPM dependencies
+
 └── README.md # This documentation
+
 
 
 ## 🛠️ Installation & Setup
