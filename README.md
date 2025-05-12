@@ -79,13 +79,13 @@ npm run test:sequential
 npm run test:parallel
 ```
 
-### 🔍 Run a Specific Test
+### 4. 🔍 Run a Specific Test
 
 ```bash
 npx playwright test tests/specs/10_testcase.spec.js
 ```
 
-### 📊 Generate HTML Report
+### 5. 📊 Generate HTML Report
 
 ```bash
 npx playwright show-report
@@ -96,7 +96,7 @@ npx playwright show-report
 
 
 
-### ✍️ Author
+### 6. ✍️ Author
 Baibhav
 
 Automation QA Engineer
