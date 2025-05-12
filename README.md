@@ -85,6 +85,9 @@ npx playwright show-report
 
 ### ✍️ Author
 Baibhav
+
 Automation QA Engineer
+
 GitHub: grootste
+
 Email: singh.baibhav@321@gamil.com
