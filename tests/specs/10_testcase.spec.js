@@ -11,17 +11,17 @@ test.describe.configure({ mode: 'parallel' });
 /**
  * Test Case 1: Navigate to HTML Page
  *
- * This test simulates user behavior by navigating to the HTML tutorial page on W3Schools.
- * It performs the following validations:
- * - Clicks the "HTML Home" navigation link.
- * - Ensures the HTML Home element is visible.
- * - Verifies that the text of the HTML Home link is "HTML HOME".
- * - Checks visibility of the Dashboard section after navigation.
- * - Confirms that the Dashboard contains the label "Tutorial".
+ * This test verifies that after using the base fixture to land on the HTML page,
+ * the HTML tutorial home page and dashboard elements are correctly displayed.
  *
- * This test demonstrates UI interaction, element validation, and basic content verification.
+ * It checks:
+ * - The visibility of the HTML Home heading.
+ * - The exact text content "HTML HOME".
+ * - The presence and label of the Dashboard area with text "Tutorial".
+ *
+ * The `page` used here is already pre-navigated by the baseFixture,
+ * eliminating the need to repeat setup navigation steps inside the test body.
  */
-
 
 test('1. Navigate to HTML Page', async ({page}) => {
    await clickElement(page, locators.htmlPage.htmlHome);
@@ -32,8 +32,24 @@ test('1. Navigate to HTML Page', async ({page}) => {
 });
 
 
+/**
+ * Test Case 2: Login with Valid Credentials
+ *
+ * This test uses the base fixture to start directly on the HTML page,
+ * then performs a user login from there.
+ *
+ * Steps include:
+ * - Clicking the login link
+ * - Filling in email and password
+ * - Capturing screenshots (pre-login with masking, post-login)
+ * - Clicking the login button
+ * - Re-validating HTML Home page and Dashboard after login
+ *
+ * The `page` here is pre-loaded to W3Schools' HTML page by the fixture,
+ * enabling consistent test setup and clean structure.
+ */
 
-test('2. Login ', async ({ page }) => {
+test('2. Login Login with Valid Credentials ', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password);    
 });

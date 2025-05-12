@@ -1,7 +1,25 @@
+📋 Corresponding Test Case Documentation
+
 | Field               | Details                                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------------------- |
 | **Test Case ID**    | TC001                                                                                             |
 | **Title**           | Navigate to HTML Page and Validate Content                                                        |
-| **Steps**           | 1. Click on the HTML Home link<br>2. Verify visibility of key elements<br>3. Validate text values |
+| **Steps**           | 	1. Use base fixture to navigate
+|                     |     2. Check "HTML HOME"
+|                     |     3. Check "Tutorial"
 | **Expected Result** | HTML Home page loads, "HTML HOME" text appears, and Dashboard shows "Tutorial"                    |
 | **Category**        | Navigation, UI Verification                                                                       |
+
+
+| Field               | Details                                                                                                                                                                                   |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test Case ID**    | TC002                                                                                                                                                                                     |
+| **Title**           | Login with Valid Credentials and Validate Post-login UI                                                                                                                                   |
+| **Steps**           |   1. Use base fixture to land on HTML page
+|                     |   2. Click login
+|                     |   3. Fill form
+|                     |   4. Screenshots
+|                     |   5. Login
+|                     |   6. Validate HTML page again |
+| **Expected Result** | User logs in, HTML page loads, "HTML HOME" and "Tutorial" text appear                                                                                                                     |
+| **Category**        | Login, Navigation, UI Validation, Screenshot                                                                                                                                              |                                                                                                                         |

@@ -2,6 +2,23 @@
 const locators = require('../tests/locators/locators');
 const { fillInput, clickElement, takeScreenshot, checkElementVisible, checkTextEquals } = require('../utils/actions');
 
+/**
+ * LoginPage - Page Object Model
+ *
+ * This class encapsulates login functionality for the application.
+ * It includes:
+ * - Navigation to the login page
+ * - Filling in the email and password inputs
+ * - Masked screenshot capture before login (for security)
+ * - Clicking the login button
+ * - Taking a post-login screenshot for audit/troubleshooting
+ * - Navigating to the HTML page and verifying visibility and labels
+ *
+ * This abstraction allows clean reuse of login logic in tests and adheres to
+ * the Page Object Model (POM) best practices.
+ */
+
+
 class LoginPage {
   constructor(page) {
     this.page = page;
