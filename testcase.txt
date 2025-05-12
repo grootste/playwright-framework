@@ -40,3 +40,54 @@
 | **Steps**        | 1. Login <br> 2. Navigate to Bootstrap5 tab <br> 3. Scroll & click into color section <br> 4. Validate color blocks |
 | **Expected**     | Each Bootstrap color class has correct text, color, and spacing                                                     |
 | **Category**     | UI Verification, Styling                                                                                            |
+
+
+| Field            | Value                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| **Test Case ID** | `TC005`                                                                                |
+| **Title**        | HTML Table Structure and Content Validation                                            |
+| **Steps**        | 1. Login <br> 2. Navigate to Tables page <br> 3. Validate headers, rows, cell contents |
+| **Expected**     | Table structure and all 18 cells should match expectations                             |
+| **Category**     | Table Verification, UI, Content Match                                                                           |
+
+
+| Field            | Value                                                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Test Case ID** | TC006                                                                                                              |
+| **Title**        | HTML JS Confirm Pop-up – Accept and Cancel                                                                         |
+| **Steps**        | 1. Login <br> 2. Navigate to JS alert <br> 3. Open Try-It tab <br> 4. Accept/Dismiss popup <br> 5. Verify messages |
+| **Expected**     | "You pressed OK!" and "You pressed Cancel!" messages appear                                                        |
+| **Category**     | Multi-tab, Dialog Handling, iframe interaction                                                                     |                                                                 |
+
+| Field            | Value                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Test Case ID** | TC007                                                                                                      |
+| **Title**        | HTML Drag and Drop                                                                                         |
+| **Steps**        | 1. Login <br> 2. Navigate to Drag and Drop demo <br> 3. Perform drag action <br> 4. Verify element dropped |
+| **Expected**     | Element is successfully dropped and visible in new position                                                |
+| **Category**     | UI Interaction, Drag-and-Drop                                                                              |                                        |
+
+| Field               | TC008                                                                                                                                                                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test Case ID**    | TC008                                                                                                                                                                                                                                                       |
+| **Title**           | Bootstrap Spinner                                                                                                                                                                                                                                           |
+| **Steps**           | 1. Use `baseFixture` to navigate to HTML page. <br> 2. Perform login. <br> 3. Wait for visibility of Bootstrap link. <br> 4. Click Bootstrap button and scroll to spinner. <br> 5. Check if spinner is visible. <br> 6. Verify spinner animation and color. |
+| **Expected Result** | Spinner is visible, spinning, and has the correct color (Bootstrap primary color).                                                                                                                                                                          |
+| **Category**        | UI Interaction, Spinner Validation                                                                                                                                                                                                                          |                                                                                                                                                                                    |
+
+
+| Field               | TC009                                                                                                                                                                                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test Case ID**    | TC009                                                                                                                                                                                                                                                                                           |
+| **Title**           | Bootstrap Select Dropdown                                                                                                                                                                                                                                                                       |
+| **Steps**           | 1. Use `baseFixture` to navigate to the HTML page. <br> 2. Perform login. <br> 3. Wait for visibility of the Bootstrap link. <br> 4. Click Bootstrap button and scroll to dropdown. <br> 5. Click on the dropdown and select an option by label. <br> 6. Verify the selected option is correct. |
+| **Expected Result** | The option with label '2' is selected in the dropdown, and the selection is verified correctly.                                                                                                                                                                                                 |
+| **Category**        | UI Interaction, Dropdown Validation                                                                                                                                                                                                                                                             |                                                                                                                                                                                                                           |
+
+| Field               | TC010                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Test Case ID**    | TC010                                                                                                                                                                                                                                                                                                                                                                          |
+| **Title**           | Bootstrap Checkboxes                                                                                                                                                                                                                                                                                                                                                           |
+| **Steps**           | 1. Use `baseFixture` to navigate to the HTML page. <br> 2. Perform login. <br> 3. Wait for visibility of the Bootstrap link. <br> 4. Click Bootstrap button and scroll to checkbox section. <br> 5. Click the first checkbox and verify it’s checked. <br> 6. Click the second checkbox and verify it’s checked. <br> 7. Uncheck the first checkbox and verify it’s unchecked. |
+| **Expected Result** | Both checkboxes are checked after clicking, and the first checkbox is unchecked after unchecking it.                                                                                                                                                                                                                                                                           |
+| **Category**        | UI Interaction, Checkbox Validation                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                         |

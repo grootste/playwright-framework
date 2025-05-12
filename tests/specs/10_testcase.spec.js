@@ -155,12 +155,30 @@ test('TC004 - Bootstrap5 Color Validation', async ({ page }) => {
    
 });
 
+/**
+ * Test Case 5: HTML Table Validation
+ *
+ * Description:
+ * This test case uses the base fixture to navigate to the W3Schools HTML page and login,
+ * then verifies the structure and content of a sample HTML table.
+ *
+ * Steps:
+ * - Logs in via the LoginPage abstraction
+ * - Clicks the "Tables" option in the navigation bar
+ * - Verifies:
+ *   - Table visibility
+ *   - Number of header columns
+ *   - Header text matches ["Company", "Contact", "Country"]
+ *   - Number of table rows (7)
+ *   - Content of all table cells using regular expressions to handle whitespace
+ *
+ * This test demonstrates structured UI verification, table parsing,
+ * and strong use of locators and pattern matching with regex.
+ */
 
 
-test('5. HTML table', async ({ page }) => {
-  /** Navigate to https://www.w3schools.com/html/default.asp
-   * using baseFixtures fucntion then use fucntion then use Login
-   */
+test('TC005 - HTML Table Validation', async ({ page }) => {
+ 
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password); // 
   await checkElementVisible(page, locators.tables.navBarTable)
@@ -205,11 +223,33 @@ test('5. HTML table', async ({ page }) => {
 
 });
 
+/**
+ * Test Case 6: HTML JavaScript Alert Popup (Confirm Box)
+ *
+ * Description:
+ * This test logs in using the LoginPage class and navigates to the JavaScript section,
+ * scrolls to the Confirm Box demo, opens the "Try it Yourself" environment in a new tab,
+ * and interacts with the JavaScript confirm dialog inside an iframe.
+ *
+ * It tests both:
+ *  - Accepting the alert
+ *  - Dismissing the alert
+ * 
+ * Steps:
+ * - Login
+ * - Navigate to "JavaScript" section
+ * - Scroll to and click the Confirm Box demo
+ * - Launch "Try it Yourself" in a new tab
+ * - Interact with confirm dialogs inside iframe
+ * - Validate resulting message for both OK and Cancel choices
+ *
+ * This test demonstrates tab handling, iframe switching, JavaScript dialog interaction,
+ * and text validation after alert confirmation or dismissal.
+ */
 
-test('6. HTML Pop up', async ({ page }) => {
-        /** Navigate to https://www.w3schools.com/html/default.asp
-         * using baseFixtures fucntion then use fucntion then use Login
-         */
+
+test('TC006 - HTML JavaScript Alert Popup Confirm Box', async ({ page }) => {
+      
         const loginPage = new LoginPage(page);
         await loginPage.login(email, password);
         await waitForVisible(page, locators.navBar.javaScript, delay10)
@@ -262,11 +302,25 @@ test('6. HTML Pop up', async ({ page }) => {
   
 });
 
+/**
+ * Test Case 7: HTML Drag and Drop Interaction
+ *
+ * Description:
+ * This test validates the drag-and-drop functionality on the HTML demo page.
+ *
+ * Steps:
+ * 1. Login via the `LoginPage` class.
+ * 2. Navigate to the drag-and-drop demo page using `clickElement()`.
+ * 3. Wait for the drag source to appear.
+ * 4. Perform a drag-and-drop operation between two elements.
+ * 5. Verify that the object is now visible in the drop area.
+ *
+ * This test demonstrates advanced DOM interaction using Playwright's `dragTo()` method.
+ * It's especially useful for validating frontend interactivity and component integration.
+ */
 
-  test('7. HTML', async ({ page }) => {
-  /** Navigate to https://www.w3schools.com/html/default.asp
-   * using baseFixtures fucntion then use fucntion then use Login
-   */
+test('TC007 - HTML Drag and Drop Interaction', async ({ page }) => {
+
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password);
 
@@ -280,15 +334,28 @@ test('6. HTML Pop up', async ({ page }) => {
   // Perform the drag-and-drop action
   await dragSource.dragTo(dropTarget);
 
-  // Optionally, verify the drop (e.g., check if the item moved)
+  //verify the drop (e.g., check if the item moved)
   await expect(dropTarget.locator(locators.dragAndDrop.dragObj)).toBeVisible();
 
   });
 
-test('8. Bootstrap Spinner', async ({ page }) => {
-  /** Navigate to https://www.w3schools.com/html/default.asp
-   * using baseFixtures fucntion then use fucntion then use Login
-   */
+  /**
+ * Test Case 8: Bootstrap Spinner
+ *
+ * This test verifies that the Bootstrap spinner on the W3Schools HTML page functions as expected.
+ * The steps include:
+ * - Logging into the site with valid credentials.
+ * - Navigating to the Bootstrap section via the navbar.
+ * - Interacting with the Bootstrap 5 button.
+ * - Ensuring that the dashboard and spinner appear correctly.
+ * - Verifying that the spinner is visible, spinning (by checking CSS animation), and has the correct color.
+ *
+ * This test ensures that the spinner behavior follows the expected Bootstrap style and the animation runs correctly.
+ */
+
+
+test('TC008 -  Bootstrap Spinner', async ({ page }) => {
+  
   const loginPage = new LoginPage(page);
   await loginPage.login(email, password);
 
@@ -323,10 +390,23 @@ test('8. Bootstrap Spinner', async ({ page }) => {
 
 });
 
-test('9. Bootstrap Select Dropdown', async ({ page }) => {
-      /** Navigate to https://www.w3schools.com/html/default.asp
-       * using baseFixtures fucntion then use fucntion then use Login
-       */
+/**
+ * Test Case 9: Bootstrap Select Dropdown
+ *
+ * This test verifies the functionality of the Bootstrap select dropdown on the W3Schools HTML page.
+ * The steps include:
+ * - Logging into the site with valid credentials.
+ * - Navigating to the Bootstrap section via the navbar.
+ * - Interacting with the Bootstrap 5 dropdown.
+ * - Selecting an option by its label.
+ * - Verifying that the correct option is selected.
+ *
+ * This test ensures that the dropdown behaves correctly by selecting an option and validating the expected result.
+ */
+
+
+test('TC009 - Bootstrap Select Dropdown', async ({ page }) => {
+
       const loginPage = new LoginPage(page);
       await loginPage.login(email, password);
 
@@ -342,7 +422,7 @@ test('9. Bootstrap Select Dropdown', async ({ page }) => {
       await clickElement(page, locators.dropDown.bs5Select)
       const dropdown = page.locator(locators.dropDown.dropDownField);
 
-      // Select an option by its value (you can also select by text or index)
+      // Select an option by its label (you can also select by text or index)
       await dropdown.selectOption({ label: '2' });
 
       // Verify the selected option
@@ -352,10 +432,24 @@ test('9. Bootstrap Select Dropdown', async ({ page }) => {
 
 });
 
-test('10. Bootstrap Checkboxes', async ({ page }) => {
-      /** Navigate to https://www.w3schools.com/html/default.asp
-       * using baseFixtures fucntion then use fucntion then use Login
-       */
+/**
+ * Test Case 10: Bootstrap Checkboxes
+ *
+ * This test verifies the functionality of the Bootstrap checkboxes on the W3Schools HTML page.
+ * The steps include:
+ * - Logging into the site with valid credentials.
+ * - Navigating to the Bootstrap section via the navbar.
+ * - Interacting with the Bootstrap checkboxes.
+ * - Checking both checkboxes.
+ * - Verifying that both checkboxes are checked.
+ * - Unchecking the first checkbox and verifying it is unchecked.
+ *
+ * This test ensures that the checkboxes behave correctly when checked and unchecked.
+ */
+
+
+test('TC010 - Bootstrap Checkboxes', async ({ page }) => {
+     
       const loginPage = new LoginPage(page);
       await loginPage.login(email, password);
 
