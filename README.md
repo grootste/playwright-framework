@@ -6,6 +6,7 @@ This project is an automated test suite using [Playwright](https://playwright.de
 
 ## 📦 Project Structure
 
+```text
 Covergo/
 ├── config/ # Global configuration files
 ├── fixtures/ # Custom Playwright test fixtures
@@ -22,7 +23,7 @@ Covergo/
 ├── package.json # NPM dependencies
 └── README.md # This documentation
 
-
+```
 
 ## 🛠️ Installation & Setup
 
