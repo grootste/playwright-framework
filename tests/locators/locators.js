@@ -1,3 +1,4 @@
+
 module.exports = {
   navBar: {
     htmlLink: 'a.ga-nav.subtopnav_firstitem',
@@ -131,3 +132,28 @@ module.exports = {
     }
   ]
 };
+
+
+/** 
+ * Locator File for W3Schools Website
+ *
+ * This file contains the locators for all the key elements on the W3Schools website 
+ * that will be used in the automated test cases. The locators are organized by page 
+ * and section to ensure maintainability and reusability across different test scenarios.
+ *
+ * Each page and section has a corresponding object with selectors for its elements.
+ * The locators are defined using CSS selectors, XPath, or text-based selectors, based 
+ * on the structure and requirements of the W3Schools website.
+ *
+ * Example:
+ * - For the navigation bar: `navBar` contains selectors for the links in the navbar.
+ * - For the login page: `loginPage` contains selectors for the login form elements.
+ * - For the bootstrap page: `bootStrap` contains selectors for the elements on the bootstrap tutorial page.
+ *
+ * This approach helps maintain consistency across tests and avoids duplicating code.
+ * By centralizing all selectors in one file, you can easily update the locator strategy 
+ * if the website changes or if you want to refactor test code.
+ *
+ * The locators are designed to be used in combination with Playwright's `page.locator()`
+ * method and follow best practices for selector efficiency.
+ */
