@@ -3,9 +3,20 @@ const { expect } = require('@playwright/test');
 const { checkElementVisible, getText, checkTextEquals, clickElement, waitForNetworkIdle, waitForVisible, scrollToElement } = require('../../utils/actions');
 const { test } = require('../../fixtures/baseFixture');  // Import custom fixture fixtures
 const LoginPage = require('../../pages/LoginPage');
-const { email, password, fname, lname, delay10, delay20 } = require('../../config/global.config'); // Import your config
+const { email, password, fname, lname, delay10 } = require('../../config/global.config'); // Import your config
 
-//Describing config paralel model
+/**
+ * Configure the current test.describe block to run tests in parallel mode.
+ * This improves execution speed by running multiple tests concurrently.
+ * 
+ *  Use with caution:
+ * - Ensure tests are isolated and do not share state or affect each other.
+ * - Avoid shared browser contexts, files, or data across tests.
+ * 
+ * For dependent tests, consider using:
+ * test.describe.configure({ mode: 'serial' });
+ */
+//Describing config parallel model
 test.describe.configure({ mode: 'parallel' });
 
 /**
