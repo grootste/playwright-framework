@@ -74,7 +74,12 @@ Sequential execution use 1 workers.
 npm run test:parallel
 ```
 ```text
-Parllel execution use 4 workers to maintain effective resecouce management of device. Please change it on Playright config file.
+Parllel execution use 2 workers to maintain effective resecouce management of system. Please change it on Playright config file. If the system is getting perfomance issues the test might get falky results. It might help if u increase the limit for Node.js by setting an environment variable before running your tests to 4gb. In Terminal execute the commnad below.
+```
+```bash
+
+set NODE_OPTIONS=--max-old-space-size=4096
+
 ```
 ### 4. 🔍 Run a Specific Test
 

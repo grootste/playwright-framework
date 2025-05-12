@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "npx playwright test",
-    "test:parallel": "npx playwright test tests/specs/10_testcase.spec.js --workers=4",
+    "test:parallel": "npx playwright test tests/specs/10_testcase.spec.js --workers=2",
     "test:sequential": "npx playwright test tests/specs/10_testcase.spec.js --workers=1"
   },
   "devDependencies": {
