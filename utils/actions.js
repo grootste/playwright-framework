@@ -134,3 +134,11 @@ async  takeScreenshot(page, name, options = {}) {
 
   
 };
+
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

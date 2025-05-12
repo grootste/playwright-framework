@@ -29,9 +29,11 @@ exports.test = baseTest.extend({
     await use(page);
   },
   
-  // Add other fixtures as needed
-  /**user: async ({}, use) => {
-    await use({ username: 'test', password: 'test123' });
-  }
-    **/
 });
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

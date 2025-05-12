@@ -40,3 +40,10 @@ class LoginPage {
 }
 
 module.exports = LoginPage;
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

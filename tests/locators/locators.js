@@ -157,3 +157,10 @@ module.exports = {
  * The locators are designed to be used in combination with Playwright's `page.locator()`
  * method and follow best practices for selector efficiency.
  */
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

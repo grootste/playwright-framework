@@ -91,3 +91,10 @@
 | **Steps**           | 1. Use `baseFixture` to navigate to the HTML page. <br> 2. Perform login. <br> 3. Wait for visibility of the Bootstrap link. <br> 4. Click Bootstrap button and scroll to checkbox section. <br> 5. Click the first checkbox and verify it’s checked. <br> 6. Click the second checkbox and verify it’s checked. <br> 7. Uncheck the first checkbox and verify it’s unchecked. |
 | **Expected Result** | Both checkboxes are checked after clicking, and the first checkbox is unchecked after unchecking it.                                                                                                                                                                                                                                                                           |
 | **Category**        | UI Interaction, Checkbox Validation                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                         |
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

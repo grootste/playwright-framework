@@ -480,3 +480,10 @@ test('TC010 - Bootstrap Checkboxes', async ({ page }) => {
       await expect(checkbox).not.toBeChecked();
   
 });
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */

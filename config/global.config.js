@@ -24,3 +24,10 @@ module.exports = {
   delay10: 10000,
   delay20: 20000
 };
+
+/**
+ * Author: Baibhav Singh
+ * Role: Automation QA Engineer
+ * GitHub: https://github.com/grootste
+ * Email: singh.baibhav321@gmail.com
+ */
